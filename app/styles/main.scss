@@ -92,3 +92,19 @@ body {
     border-bottom: 0;
   }
 }
+
+.hotel {
+
+  &_link {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &_rateDeadline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
