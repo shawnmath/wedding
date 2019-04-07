@@ -95,16 +95,32 @@ body {
 
 .hotel {
 
-  &_link {
+  &_link,
+  &_reserve,
+  &_number {
     display: block;
     margin-bottom: 16px;
     font-size: 24px;
     font-weight: bold;
+    color: blue;
   }
-
-  &_rateDeadline {
+  
+  &_rateDeadline,
+  &_issues {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 18px;
   }
+
+  &_rateDeadline {
+    margin-bottom: 2em;
+  }  
+}
+
+.group_contact {  
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  // color: blue;
 }
