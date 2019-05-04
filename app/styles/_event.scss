@@ -1,0 +1,16 @@
+@import './colors.scss';
+@import './typography.scss';
+
+.event {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;  
+  font-size: 1.5em;
+  font-weight: 300;
+  font-family: $montserrat;
+  text-align: center;
+
+  > p {
+    margin: 6px 0;
+  }  
+}

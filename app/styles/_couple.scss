@@ -1,0 +1,19 @@
+@import './colors.scss';
+@import './typography.scss';
+
+.couple {
+  margin-top: 0;
+  font-family: $playfair;
+  font-size: 3em;  
+  vertical-align: top;
+  color: #fff;
+
+  &__partner {
+    font-weight: 700;    
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
