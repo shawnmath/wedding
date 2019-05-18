@@ -9,8 +9,15 @@
   font-weight: 300;
   font-family: $montserrat;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
 
   > p {
     margin: 6px 0;
+    @media screen and (max-width: 767px) {
+      margin: 4px 0;
+    }
   }  
 }

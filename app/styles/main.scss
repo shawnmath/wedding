@@ -1,8 +1,10 @@
 @import './colors';
 @import './typography';
+@import './header';
 @import './couple';
 @import './event';
 @import './hotel';
+@import './parking';
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -16,6 +18,9 @@ body {
   font-weight: 300;
   color: #fff;
   background: $blue;
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .ampersand {
@@ -23,48 +28,91 @@ body {
   font-weight: 400;
 }
 
-.wrapper {
-  margin: 2rem;
-  border: 1px solid $coral;
-}
+.wrapper {  
+  padding: 0 2rem;  
+  @media screen and (max-width: 767px) {
+    padding: 0 1rem;  
+  }
 
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-  padding: 1em;
-
-  .intro {
-    @media screen and (min-width: 769px) {
-      padding-right: 1em;
-    }
-
-    &__prologue {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1em;
-      font-family: $montserrat;
-      font-size: 0.8em;
-      letter-spacing: 1em;      
-    }
+  .content {
+    max-width: 1050px;  
+    margin: 2rem auto;
+    padding-top: 2rem;
+    border: 1px solid $coral;
   }
 }
 
 .section {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 
   &__headline {
+    margin-bottom: 0.5em;
     font-family: $playfair;
     font-size: 2em;
     font-weight: 300;
+    text-align: center;
     color: $coral;
+    @media screen and (max-width: 767px) {
+      font-size: 1.3em;
+    }
   }
 }
 
-.comingSoon {
-  text-align: center;
+.link {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: $montserrat;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.25s; 
+
+  &:hover {
+    text-decoration: none;
+    color: $blue;    
+    
+    &:after {      
+      bottom: -1px;
+      height: 30px;
+      margin-left: -10px;
+      padding-right: 20px;
+      @media only screen  
+      and (min-device-width: 768px) 
+      and (max-device-width: 1024px) {
+        bottom: 3px;
+        height: 4px;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: hsla(6, 78, 67, 0.8);      
+    transition: bottom 0.25s, height 0.25s, margin 0.25s, padding 0.25s;
+    @media screen and (max-width: 767px) {
+      height: 2px;
+    }
+  }
+}
+
+@media (hover: none) {
+  .link:hover {
+    color: inherit;
+  }
 }
 
 

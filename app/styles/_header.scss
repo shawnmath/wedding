@@ -1,0 +1,53 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  padding: 1em;
+  @media screen and (max-width: 939px) {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    display: block;
+  }
+
+  .intro {
+    @media screen and (max-width: 940px) {
+      margin: 0 auto;
+    }
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 1.5em;
+    }
+
+    &__prologue {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1em;
+      padding-left: 10px;
+      font-family: $montserrat;
+      font-size: 0.8em;
+      letter-spacing: 1em;
+      color: hsla( 0, 0, 100%, 0.6 );
+      @media screen and (min-width: 939px) and (max-width: 955px) {
+        font-size: 0.7em;
+      }
+      @media screen and (max-width: 767px) {
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}
