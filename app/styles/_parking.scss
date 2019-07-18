@@ -16,6 +16,7 @@
 
     > ul {
       padding: 0;
+      margin-bottom: 0;
       list-style: none;
       @media screen and (max-width: 767px) {
         margin: 0;
@@ -26,8 +27,14 @@
       }
     }
 
-    &__garage {
-      margin-bottom: 2rem;
+    &__garage {      
+      @media screen and (max-width: 767px) {
+        margin-bottom: 2rem;
+      }
+      
+      &:not(:last-child) {        
+        margin-bottom: 2rem;
+      }
       
       > p {
         margin: 6px 0;
